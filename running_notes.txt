@@ -5,7 +5,7 @@ Points to remember about React:
 2. It is Declarative meaning, the react paradigm automatically makes a component we desire, we just have to enter what it's role is.
 
 Softwares required:
-1. Node
+Node
 
 Steps: 
 1. run npx create-react-app <app_name>
