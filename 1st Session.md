@@ -61,7 +61,7 @@ Doing it the traditional way first
 # KEY TAKEAWAYS
 * What is React ? --- A front-end framework
 * What is DOM & similarly what is React-DOM ? --- The interface that let's JS talk to HTML
-* Babel & JSX --- JSX is html with additional powers, and Babel is a transpiler that converts JSX to pure JS
+* Babel & JSX --- JSX is html with additional powers, and Babel is a transpiler that converts JSX to pure JS.
 * Components -- Nothing but a way for code reusability.
 
 <br>

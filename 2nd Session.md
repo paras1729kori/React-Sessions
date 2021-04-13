@@ -48,7 +48,7 @@ In last class, we learnt
 
 ## Props vs States
 * Props are variables that are static, once passed they won't change again
-* Whereas on the other hand , States are variables that change every time the react-dom changes i.e the page changes
+* Whereas on the other hand , States are variables that change every time the react-dom changes i.e the page changes.
 
 ## Styling and Style Props
 * In react we can do styling in 2 ways
