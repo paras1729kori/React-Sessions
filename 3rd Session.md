@@ -13,4 +13,3 @@ In last class, we learnt
 * Make a folder SearchBar (inside SearchBar.js and SearchBar.css)
 * Import the css file
 * Import SearchBar in App.js
-* 

@@ -43,7 +43,7 @@ In last class, we learnt
 
 ## Props
 > Read defintion from notes
-* Pass incrementBy = {} props in each component
+* Pass incrementBy = {} props in each component.
 * And change code acc.
 
 ## Props vs States
