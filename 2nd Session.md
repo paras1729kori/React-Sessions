@@ -19,23 +19,69 @@ In last class, we learnt
 > Explain create react template
 * Now, as you can see there are many different thing here but remember "Kaam se kaam rakho aur aage badho"
 * So, don't focus on any other stuff
-    * Just see that there is an index.htm file like we had
-    * And a App.js that is connected to it the same we connected pur js file in last lecture
-* Let's run it (I mean what's the use of a parker if it doesn't write)
+    * Just see that there is an index.html file like we had
+    * And an App.js that is connected to it the same we connected pur js file in last lecture
+* Let's run it
     * cd into your project folder
     * And run npm start
-    * Viola !!!
+    * Voila !!!
 
 ## Building the same Count Button
 * Now as I explained y'all earlier that we use components to make code more reusable, etc things
 * Let's now create the same counter button components using react taht we made using normal JS earlier in the course
 > Do it using the normal ++ thingy first but it won't work as the React only wants to update the React.DOM and not the whole interface
+```javascript
+import React from 'react'
+
+const Component_Name = () => {
+    const currentCount = 0
+    // change it to let
+    const handleClick = () => {
+        currentCount++
+        console.log(currentCount)
+    }
+
+    return (
+        <div>
+            <button onClick = {handleClick}>Increment By 1</button>
+            <h1>{currentCount}</h1>
+        </div>
+    )
+}
+
+export default Component_Name;
+```
+* Why did this happen, it's because this only makes the React.DOM change itself and not the React.
 * So, we use something called as useState, now I know this is a very big topic and sometimes people are skeptical about and get confused in this part, but don't worry I got you
-* useState is a hook, Hooks are very important topics in React, and I'll be introducing with 2 of those hooks, the 2 which are used the most (useState, useEffect)
-* We'll see what useEffect is in the coming lecture, lets focus on useState for now.
+* useState is a hook, Hooks are very important topics in React, and I'll be introducing y'all with 3 of those hooks, the 3 which are used the most (useState, useEffect, useContext)
+* We'll see what useEffect, useContext are in the coming lecture, lets focus on useState for now.
 > * Think of useState as initoalizing a variable and a function together
 > * Infact, if we log the useState variable we can see that what is logged is nothing but an inital value with a function
+> * If you wanna use Bootstrap here in react, simplay put the cdn in the index.html file
 > * Continue to Code
+```javascript
+import React, { useState } from 'react'
+
+const Component_Name = () => {
+    // console.log(useState(0))
+    const [currentCount, setCurrentCount] = useState(0)
+    // 0 is a default value
+    const handleClick = () => {
+       currentCount++
+       setCurrentCount(currentCount)
+       // setCurrentCount(currentCount+1)
+    }
+
+    return (
+        <div>
+            <button onClick = {handleClick}>Increment By 1</button>
+            <h1>{currentCount}</h1>
+        </div>
+    )
+}
+
+export default Component_Name;
+```
 * Now remember, what I said the most important part of using components is .... code reusability
 * Simply add one more component in App.js and you are done writing your second button
 * Now, lets take this one more step further, what is we want one of them to increment by 1 and another by 5, what do we do then any suggestions....
@@ -57,19 +103,27 @@ In last class, we learnt
 * The only different thing in React is that the CSS attributes are changed or written acc. to the JS text style i.e CamelCase style
 * And for using external CSS simply add a css/scss file and import it in the JS component
 > Continue to code, add border, background, color to the buttons
-
+```javascript
+const btnStyle = {
+    background:"blue",
+    borderRadius: "8px"
+}
+// pass this as a style attr in button tag
+```
+* What if we want differen colors for each button ?
+* Simplay make a buttonColor prop, give it a value and pass them in the btnStyle
 > Comments in react are same as that in JS i.e /* */
 
 ## Component Modules
 * Now most of the times in real-life situations, there are many components in a single page app
 * So the developers make a component module, for that specific component
-> * Continue to code, make a new foldre for the CountButton.js and CountButton.css
+> * Continue to code, make a new folder for the CountButton.js and CountButton.css
 > * Add a className to the button and style it in the external css file
 
 <br>
 
 # KEYTAKEAWAYS
-* The traditional way of creating react app or getting a template for react apps is made by running create-react-app and then the app name
+* The conventional way of creating react app or getting a template for react apps is made by running create-react-app and then the app name
 * useState is a combination of a variable and a function, it is used for changing the state of a variable when the react-app is rendered again
 * Props are the coolest part of React Components which makes React code more reusable and helps adding more features to it
 * Styling in react is similar to what we normally do, but while writing inline css remember to use camelCase style for writing the css
