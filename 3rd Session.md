@@ -148,18 +148,39 @@ useEffect(() => {
 ## Loader Thingy
 * Remember the loading things we get when we go on a website, it's either an image or some text, or whatever.
 * We'll see how do we do that, cause most of the times we won't be writing the data within the app but fetching it from an api
-* 
+* Simply add a setTimeout function in a useEffect Hook, why inside a useEffect because whenever the user refreshers the page other components should not be disturbed
+```javascript
+// code written in App.js
+// a state variable
+const [productState, setProductState] = useState([])
+useEffect(() => {
+    setTimeout(() => {
+        setProductState([
+            "tooth brush",
+            "tooth paste",
+            "mouth wash",
+            "mouth guard",
+            "dental floss"
+        ])
+    }, 2000)
+},[])
+
+// then while passing the data in component
+// we'll use teranry operator
+{ productState.length > 0 ? <SearchBar list_item={productState} /> : <h1>Loading ...</h1>}
+```
 
 ## useContext Hook
 * Manier times there are many layers of components, like App > Com1 > Test1 && Test 2 && Com2 > Test3 && Test4
 * And we don't wanna go on passing props from one layer to another
 > * Add a MyContext.js file
 ```javascript
-import { createContext } from 'react;
+import { createContext } from 'react'
 
 export const myContext = createContext(null)
-
-// import in App
+```
+* Import in App.js
+```javascript
 import { MyContext } from './MyContext'
 // Wrap the body of with  <MyContext.Provider> tags
 ```
@@ -188,3 +209,7 @@ const Button = (props) => {
 export default Button
 ```
 * That's it
+
+_I hope I have given you all a fair idea about what React is and what power it beholds_
+
+*Happy Hacking ✌*

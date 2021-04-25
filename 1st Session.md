@@ -128,9 +128,3 @@ ReactDOM.render(<App />, reactContentRoot)
 * What is DOM & similarly what is React-DOM ? --- The interface that let's JS talk to HTML
 * Babel & JSX --- JSX is html with additional powers, and Babel is a transpiler that converts JSX to pure JS.
 * Components -- Nothing but a way for code reusability.
-
-<br>
-
-# 2nd Session Prep
-* Ask everyone to run create-react-app app_name wherever they want their app to be.
-* And tell them to feel free to name whatever they want their app to be !!!

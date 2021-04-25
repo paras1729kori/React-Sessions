@@ -10,13 +10,10 @@ In last class, we learnt
 
 # 2nd Session
 ## Create React App Template
-> * Just make everyone do this.
-> * run command create-react-app app_name one day prior of starting this
 * Now that we have a fair idea about what exactly react is all about
 * We can now start learning the concepts or more of the different things react gives us to make our work more intereseting
 * So, let's create our first react app "The Traditional Way"
 * Simply, create a folder named whatever you like ('dsc-react' ig for me)
-> Explain create react template
 * Now, as you can see there are many different thing here but remember "Kaam se kaam rakho aur aage badho"
 * So, don't focus on any other stuff
     * Just see that there is an index.html file like we had
@@ -29,7 +26,6 @@ In last class, we learnt
 ## Building the same Count Button
 * Now as I explained y'all earlier that we use components to make code more reusable, etc things
 * Let's now create the same counter button components using react taht we made using normal JS earlier in the course
-> Do it using the normal ++ thingy first but it won't work as the React only wants to update the React.DOM and not the whole interface
 ```javascript
 import React from 'react'
 
@@ -55,10 +51,6 @@ export default Component_Name;
 * So, we use something called as useState, now I know this is a very big topic and sometimes people are skeptical about and get confused in this part, but don't worry I got you
 * useState is a hook, Hooks are very important topics in React, and I'll be introducing y'all with 3 of those hooks, the 3 which are used the most (useState, useEffect, useContext)
 * We'll see what useEffect, useContext are in the coming lecture, lets focus on useState for now.
-> * Think of useState as initoalizing a variable and a function together
-> * Infact, if we log the useState variable we can see that what is logged is nothing but an inital value with a function
-> * If you wanna use Bootstrap here in react, simplay put the cdn in the index.html file
-> * Continue to Code
 ```javascript
 import React, { useState } from 'react'
 
@@ -88,7 +80,6 @@ export default Component_Name;
 * We use something known as PROPS
 
 ## Props
-> Read defintion from notes
 * Pass incrementBy = {} props in each component.
 * And change code acc.
 
@@ -102,7 +93,6 @@ export default Component_Name;
     * And the external file styling
 * The only different thing in React is that the CSS attributes are changed or written acc. to the JS text style i.e CamelCase style
 * And for using external CSS simply add a css/scss file and import it in the JS component
-> Continue to code, add border, background, color to the buttons
 ```javascript
 const btnStyle = {
     background:"blue",
@@ -117,8 +107,6 @@ const btnStyle = {
 ## Component Modules
 * Now most of the times in real-life situations, there are many components in a single page app
 * So the developers make a component module, for that specific component
-> * Continue to code, make a new folder for the CountButton.js and CountButton.css
-> * Add a className to the button and style it in the external css file
 
 <br>
 
